@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DataTable</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.js"></script>
+</head>
+<body>
+    <!-- DataTable kullanımı birçok hazır eklentiyi sunar. Örneğin tabloda sıralama
+        işlemleri, sayfalama işlemleri, arama işlemi ve hatta pdf,excel formatında
+        indirebilme özelliklerini kolayca kullanabiliriz.  -->
+    <table id="myTable" class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Adı</th>
+                <th>Soyad</th>
+                <th>Doğum Yeri</th>
+                <th>Adresi</th>
+                <th>Numarası</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acer</td>
+                <td>Erişmiş</td>
+                <td>Şanlıurfa</td>
+                <td>adipiscing dolor iaculis vitae Fusce</td>
+                <td>2400</td>
+            </tr>
+            <tr>
+                <td>Lebib</td>
+                <td>Aslanoğlu</td>
+                <td>Erzincan</td>
+                <td>non gravida</td>
+                <td>1400</td>
+            </tr>
+            <tr>
+                <td>İsaf</td>
+                <td>Toraman</td>
+                <td>Eskişehir</td>
+                <td>quam Phasellus faucibus iaculis</td>
+                <td>9690</td>
+            </tr>
+            <tr>
+                <td>Özdal</td>
+                <td>Karakum</td>
+                <td>Afyonkarahisar</td>
+                <td>tortor porttitor volutpat neque</td>
+                <td>8291</td>
+            </tr>
+            <tr>
+                <td>Kayaalp</td>
+                <td>Özgürsoy</td>
+                <td>Burdur</td>
+                <td>eu nunc</td>
+                <td>5572</td>
+            </tr>
+            <tr>
+                <td>Sevtap</td>
+                <td>Cangir</td>
+                <td>Ağrı</td>
+                <td>et elementum condimentum ac porttitor</td>
+                <td>1967</td>
+            </tr>
+            <tr>
+                <td>Valek</td>
+                <td>Barut</td>
+                <td>Hatay</td>
+                <td>ultrices</td>
+                <td>2716</td>
+            </tr>
+            <tr>
+                <td>Sevdekar</td>
+                <td>İyidil</td>
+                <td>Van</td>
+                <td>velit tempor</td>
+                <td>278</td>
+            </tr>
+            <tr>
+                <td>Tanbay</td>
+                <td>Elgin</td>
+                <td>Adıyaman</td>
+                <td>interdum nulla Sed et tempus</td>
+                <td>3754</td>
+            </tr>
+            <tr>
+                <td>Yabgu</td>
+                <td>Yaprak</td>
+                <td>Osmaniye</td>
+                <td>et tellus</td>
+                <td>2750</td>
+            </tr>
+            <tr>
+                <td>Laminur</td>
+                <td>Karaşan</td>
+                <td>Kahramanmaraş</td>
+                <td>vel</td>
+                <td>9019</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        $('#myTable').DataTable({
+            language: {
+                info: "_TOTAL_ kayıttan _START_ - _END_ kayıt gösteriliyor.",
+                infoEmpty: "Gösterilecek hiç kayıt yok.",
+                loadingRecords: "Kayıtlar yükleniyor.",
+                lengthMenu: "Sayfada _MENU_ kayıt göster",
+                zeroRecords: "Tablo boş",
+                search: "Arama:",
+                infoFiltered: "(toplam _MAX_ kayıttan filtrelenenler)",
+                buttons: {
+                    copyTitle: "Panoya kopyalandı.",
+                    copySuccess: "Panoya %d satır kopyalandı",
+                    copy: "Kopyala",
+                    print: "Yazdır",
+                },
+
+                paginate: {
+                    first: "İlk",
+                    previous: "Önceki",
+                    next: "Sonraki",
+                    last: "Son"
+                },
+            },
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'excel', 'pdf', 'print'
+            ],
+            responsive: true
+        });
+
+    </script>
+</body>
+</html>

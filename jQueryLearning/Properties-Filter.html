@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <h2>
+        JQuery Eğitim Seti
+    </h2>
+    <button id="disable">True (Devre dışı)</button>
+    <button id="enable">True (Etkinleştir)</button>
+    <button id="run">Animasyon Run</button>
+    <br />
+    <div id="result" class="box"></div>
+    <br /><br /><br />
+    <div class="container">
+        <h2>Basit Arama işlemi</h2>
+        <input id="search" type="text" placeholder="Search..." />
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr>
+                    <td>Büşra</td>
+                    <td>Özdemir</td>
+                    <td>busra@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Samet</td>
+                    <td>Sarıkaya</td>
+                    <td>samet@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Elif</td>
+                    <td>Nur</td>
+                    <td>elif@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(function () {
+            //$("#disable").click(function () {
+            //    jQuery.fx.off = true; // butona tıklanınca animasyon devre dışı kalır
+            //});
+            //$("#enable").click(function () {
+            //    jQuery.fx.off = false; // butona tıklanınca animasyon çalıştırılır
+            //});
+            //$("#run").click(function () {
+            //    $("div").toggle("slow"); // animasyonun slow biçimde çalışması için
+
+            //});
+
+            //Filter ile arama işlemi
+
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase(); // küçük harfe çeviriyoruz
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

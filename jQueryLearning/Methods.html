@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+
+</head>
+<body>
+    <h2>Traversing</h2>
+
+    <p>jQuery Traversing - Filtering</p>
+
+    <div style="border: 1px solid black; padding:10px;">
+        <p>Divin içindeki ilk paragraf</p>
+        <p>Divin içindeki ikinci ve son paragraf</p>
+    </div>
+    <br />
+    <div style="border: 1px solid black; padding:10px;">
+        <p>İkinci Divin içindeki ilk paragraf</p>
+        <p class="demo">İkinci Divin içindeki ikinci ve son paragraf</p>
+    </div>
+    <br />
+    <div style="border: 1px solid black; padding:10px;">
+        <p>Üçüncü Divin içindeki ilk paragraf</p>
+        <p class="demo">Üçüncü Divin içindeki ikinci ve son paragraf</pclass="demo">
+    </div>
+    <br />
+    <p>My <span>name</span> is Büşra</p>
+    <p>I live in <span>Düzce</span>.</p>
+    <p>My best Friend is Mind (Brain).</p>
+    <br />
+    <ul>
+        <li class="foo">list item 1</li>
+        <li>list item 2</li>
+        <li class="foo">list item 3</li>
+        <li class="foo">list item 4</li>
+        <li class="foo">list item 5</li>
+        <li class="foo">list item 6</li>
+    </ul>
+    <button>click me</button>
+    <br />
+
+    <script>
+        $(function(){
+           // $("div").first().css("background-color","darkred"); // ilk divi darkred renginde yapacak
+          
+            
+            // $("div").last().css("background-color","darkred"); // son divi darkred renginde yapacak
+          
+            
+            // $("p").eq(0).css("background-color","darkblue"); // ilk dive uygular
+          
+            
+            // $("p").not("demo").css("background-color","darkblue"); // demo classına sahip olmayanlara uygular
+            
+            
+            //$("button").click(function(){ // span etiketlerine sahip p'leri bul ve uygula
+           
+            
+            //    $("p").has("span").css("background-color","darkblue")
+
+            //});
+
+            $("button").click(function () {
+                $("li").slice(4).css("color", "red"); // li olanların 4.'sünden itibaren uygula
+
+            });
+
+
+        });
+    </script>
+</body>
+</html>

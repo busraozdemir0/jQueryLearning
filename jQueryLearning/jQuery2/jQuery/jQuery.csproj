@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="index.html" />
+    <None Remove="jqueryAnimation.html" />
+    <None Remove="jqueryChangeEvent.html" />
+    <None Remove="jqueryClickEvent.html" />
+    <None Remove="jqueryFadeSlide.html" />
+    <None Remove="jqueryFormValidation.html" />
+    <None Remove="jqueryMessageBox.html" />
+    <None Remove="jqueryMethods.html" />
+    <None Remove="jquerySelectors.html" />
+    <None Remove="jqueryShowHide.html" />
+    <None Remove="jqueryStylingContent.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="index.html" />
+    <Compile Include="jqueryFormValidation.html" />
+    <Compile Include="jqueryMessageBox.html" />
+    <Compile Include="jqueryAnimation.html" />
+    <Compile Include="jqueryFadeSlide.html" />
+    <Compile Include="jqueryShowHide.html" />
+    <Compile Include="jqueryMethods.html" />
+    <Compile Include="jqueryClickEvent.html" />
+    <Compile Include="jqueryChangeEvent.html" />
+    <Compile Include="jqueryStylingContent.html" />
+    <Compile Include="jquerySelectors.html" />
+  </ItemGroup>
+
+</Project>

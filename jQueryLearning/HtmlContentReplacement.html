@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+
+</head>
+<body>
+    <h2>HTML İçeriklerini Değiştirme</h2>
+
+    <p><a href="https://www.udemy.com/user/karaprens-2/" target="_blank" title="udemy anasayfa">Udemy</a></p>
+    <p id="result1">Jquery ile içeriklere müdahale</p>
+    <p id="result2">İçerikler değişecek</p>
+    <p>Input Alanı: <input type="text" id="result3" value="Ayfer Uyar" /></p>
+    <button id="btn">Show Attribute</button>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show Html</button>
+    <button id="btn3">Show Val</button>
+
+    <script>
+        $(function () {
+            //$("#btn").click(function () {
+            //    alert($("a").attr("title"));
+            //});
+            //$("#btn1").click(function () {
+            //    $("#result1").text("Hello JQuery");
+            //});
+            //$("#btn2").click(function () {
+            //    $("#result1").html("<b>Hello</b> <br> JQuery");
+            //});
+            //$("#btn3").click(function () {
+            //    $("#result3").val("Büşra Özdemir");
+            //});
+
+            //$("#btn").click(function () {
+            //    $("a").attr("href", "https://www.youtube.com/"); // a tagının yolunu değiştirme
+            //});
+
+            //$("#btn").click(function () { // birden fazla attribute değiştirme
+            //    $("a").attr({
+            //        "title": "Büşra Özdemir",
+            //        "href": "https://www.youtube.com/"
+
+            //    });
+
+            //});
+
+            $("#btn").click(function () { 
+                $("a").attr("href", function (x, getValue) {
+                    return getValue + "deneme/test";  // eski değeri alıp sonuna deneme/test gibi bi uzantı ekler
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

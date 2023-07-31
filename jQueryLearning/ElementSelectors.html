@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> <!--cdn ile dahil etme(daha hızlıdır)-->
+    <script>
+        $(function () { /*documnet.ready yazmasak da olur*/
+            $("button").click(function () {
+               // $(".result").hide(); /*butona tıklandığında class'ı result olan kısmı gizleyecek*/
+                
+               
+               // $("#test").hide(); /*test id'li elementi gizler*/ 
+                
+                
+                /*$("*").hide();*/ // tüm elementleri gizler
+
+                /*$(this).hide();*/ // this dersek buton kendini gizleyecektir. Çünkü buton'a click yapıyoruz.
+
+               // $("p.result").hide(); /*p etiketleri içerisinden classı result olanı seçer*/
+
+
+               // $("p:first").hide(); //sayfada gördüğü ilk p etiketine uygulayacak
+
+
+              //  $("ul li:first").hide(); // ilk ul'nin ilk li'sini al ve gizle
+
+              //  $("ul li:first-child").hide(); // sayfadaki tüm under-listlerin ilk li'lerini alır ve gizler.
+
+
+               // $("[href]").hide(); // sitedeki tüm hrefleri gizler
+
+
+                //$("a[target=_blank]").hide(); // a taglarından target'ı blank olanı gizle
+
+                //$(":button").hide(); // buttonları gizler
+
+                $("tr:even").css("background-color","red"); // even:çift sayılı satırda yer alanların arkaplanlarını kırmızı yapar. (odd: tek sayı)
+
+
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <h2 class="result">jQuery Eğitim Seti</h2>
+    <p id="test">Tıkla bana JQUERY gücünü gör</p>
+    <p>Bana da tıkla</p>
+    <p class="result">Son kez tıkla :)</p>
+
+    <p>List 1</p>
+    <ul>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Angular JS</li>
+        <li>Vue Js</li>
+    </ul>
+    <p>List 2</p>
+    <ul>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Angular JS</li>
+        <li>Vue Js</li>
+    </ul>
+
+    <p><a href="#" target="_blank">JavaScript</a></p>
+    <p><a href="#" target="_parent">JQuery Öğreniyorum</a></p>
+
+    <table border="1">
+        <tr>
+            <th>Software</th>
+            <th>Language</th>
+        </tr>
+        <tr>
+            <th>Javascript</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Jquery</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Angular JS</th>
+            <th>Engilish</th>
+        </tr>
+        <tr>
+            <th>React JS</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <th>Vue JS</th>
+            <th>English</th>
+        </tr>
+    </table>
+
+    <button type="button">Click Me!</button>
+</body>
+</html>

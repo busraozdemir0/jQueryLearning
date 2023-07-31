@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+</head>
+    <body>
+
+        <h3>jQuery Dersleri</h3>
+        <a href="#">Link</a>
+
+        <ul id="liste">
+            <li>jQuery Reference</li>
+            <li>Selectors</li>
+            <li>jQuery Plugins <a href="#">Link</a></li>
+        </ul>
+
+        <ul>
+            <li>jQuery Reference</li>
+            <li>Selectors</li>
+            <li>jQuery Plugins <a href="#">Link</a></li>
+        </ul>
+
+
+        <script>
+            console.log($("#liste"));  /*id'ye göre seçme işlemi*/
+
+            console.log($("h3")); /*etikete göre seçme işlemi*/
+            console.log($("ul"));
+            console.log($("li"));
+            console.log($("a"));
+            console.log($("ul li a")); //ul'nin altındaki li'nin altında olan a etiketini seç
+            console.log($("#liste a"))  //liste id'li etiketin altındaki a taglarını seç.
+
+        </script>
+    </body>
+
+</html>

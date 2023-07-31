@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    <style>
+        .highlight
+        {
+            background-color:yellow;
+            display: none;
+        }
+
+        .green{
+            background-color:green;
+        }
+    </style>
+
+</head>
+    <body>
+
+        <h1>jQuery Helper Methods</h1>
+
+        <ul id="liste">
+            <li>jQuery Selectors</li>
+            <li>jQuery Methods</li>
+            <li>jQuery Animations</li>
+        </ul>
+
+        <img src="images/newyork.jpg" />
+        <br />
+        <br />
+
+        <input type="text" placeholder="FullName" value="Jquery Val Fonksiyonu"/>
+       
+        <br />
+        <br />
+        <br />
+
+        <input id="ad" type="text" placeholder="Adınız" />
+        <input id="soyad" type="text" placeholder="Soyadınız" />
+        <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+
+
+        <script>
+            console.log($("h1").text()); //h1 elemanının text özelliğini getirir
+            console.log($("ul li").text());
+
+            $("h1").text("JavaScript"); //h1 elemanının text özelliğini javascript olarak değiştirir
+
+            console.log($("input").val()); //inputun value değerini getirir
+            /*$("input").val("Büşra");*/
+
+            $("img").attr("width", "400");
+
+
+            function adsoyad() {
+                var ad = $("#ad").val();
+                var soyad = $("#soyad").val();
+
+                console.log("adınız ve soyadınız: " + ad + " " + soyad);
+
+                /*$("#ad").addClass("highlight");*/
+                $("#soyad").removeClass("green"); //green classını kaldırır
+
+                $("#ad").toggleClass("highlight"); //toggleClass eğer class eklenmişse kaldırır, eklenmemişse de o classı uygular
+            }
+
+
+        </script>
+    </body>
+
+</html>

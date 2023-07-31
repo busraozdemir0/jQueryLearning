@@ -1,0 +1,1 @@
+alert("Javascript dosyası yüklendi")

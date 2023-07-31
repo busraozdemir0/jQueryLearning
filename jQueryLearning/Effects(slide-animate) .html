@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+
+</head>
+<body>
+    <h2>
+        JQuery Eğitim Seti slide
+    </h2>
+    <div id="divClick">Click</div><br />
+    <div id="panel">Hello JQuery Slide Effect</div>
+
+    <h2>
+        JQuery Eğitim Seti animate
+    </h2>
+    <button type="button">Start</button><br /><br />
+    <div class="kutu">JQuery</div>
+    <script>
+        $(function () {
+            //$("#divClick").click(function () { // tıklanınca aşağı doğru efektli bir şekilde açılır
+            //    $("#panel").slideDown(2000);
+            //});
+
+            //$("#divClick").click(function () { // tıklanınca yukarı doğru efektli bir şekilde açılır
+            //    $("#panel").slideUp(2000);
+            //});
+
+            //$("#divClick").click(function () { // tıklanınca aşağı doğru efektli bir şekilde açılır, bir daha tıklanınca yukarı doğru kapanır
+            //    $("#panel").slideToggle(2000); // toggle=> aç/kapat
+            //});
+
+            //$("#divClick").click(function () { // tıklanınca aşağı doğru efektli bir şekilde açılır ve sonra kendi kendine yukarı doğru tekrar kapanır
+            //    $("#panel").slideDown(2000, function () {
+            //        $(this).slideUp(2000);
+            //    });
+            //});
+
+            /* Animate */
+            //$("button").click(function () {
+            //    $(".kutu").animate({ // butona tıklayınca 250 px sağa kayacak
+            //        left: '250px',
+            //        opacity: '0.6',
+            //        height: '+=50px', // her tıkladığımızda 50 px'lik büyüme gerçekleşecek
+            //        width: '+=50px'
+            //    });
+            //});
+
+            //$("button").click(function () {
+            //    $(".kutu").animate({
+            //        width:"toggle" // tıkladıkça kapanıp açılacak(width'den dolayı)
+            //    });
+            //});
+
+            //$("button").click(function () {  // birden fazla animasyon uygulama
+            //        var div = $(".kutu");
+            //        div.animate({ height: '300px', opacity: '0.4' }, 1500);
+            //        div.animate({ width: '300px', opacity: '0.8' }, 1500);
+            //        div.animate({ height: '100px', opacity: '0.4' }, 1500);
+            //        div.animate({ width: '100px', opacity: '0.8' }, 1500);
+            //});
+            $("button").click(function () {  // birden fazla animasyon uygulama
+                var div = $(".kutu");
+                div.animate({ left: '300px' }, 1500);
+                div.animate({ width: '150px' }, 1500);
+                div.animate({ fontSize: '3em' }, 1500);
+
+            });
+
+        });
+    </script>
+</body>
+</html>

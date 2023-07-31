@@ -1,0 +1,63 @@
+﻿.box{
+    width:100px;
+    height:100px;
+    background-color:darkred;
+    color:white;
+    padding:20px;
+}
+
+#divClick, #panel{
+    padding:10px;
+    text-align:center;
+    background-color:darkkhaki;
+    border:1px solid darkolivegreen;
+}
+
+#panel{
+    padding:90px;
+    display:none;
+}
+
+.kutu {
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 20px;
+    position: absolute; /* hareket eden bir nesne olduğunu belirtiyoruz */
+}
+
+/*div{
+    border:1px solid black;
+    background-color:darkkhaki;
+    padding:15px;
+}*/
+
+.loading{
+    display: none;
+    width:69px;
+    height:89px;
+    position:absolute;  /*sayfadan bağımsız olarak hareket et*/
+    top: 50%;
+    left: 50%;
+    padding: 2px;
+}
+img{
+    float:left;
+    margin-right:20px;
+}
+.warning{
+    width:500px;
+    padding:15px;
+    background-color:gold;
+}
+.error {
+    width: 500px;
+    padding: 15px;
+    background-color: red;
+}
+.success {
+    width: 500px;
+    padding: 15px;
+    background-color: green;
+}

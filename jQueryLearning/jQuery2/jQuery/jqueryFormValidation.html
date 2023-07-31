@@ -1,0 +1,127 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    <style>
+
+        #wrapper{
+            width:700px;
+            margin: 0 auto;
+        }
+
+        body {
+            font-size: 180%;
+        }
+
+        input {
+            padding: 15px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            width: 520px;
+        }
+        label{
+            display:inline-block;
+            width: 170px;
+        }
+        .form-group{
+            margin-bottom:15px;
+        }
+        button{
+            background-color:#4CAF50;
+            color:#fff;
+            padding:14px 20px;
+            border-radius:5px;
+            cursor:pointer;
+            border:none;
+            margin-top:20px;
+            width:100%;
+        }
+        #error{
+            color: red;
+            text-align:left;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="error"></div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Lütfen email adresini giriniz." />
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="text" name="phone" id="phone" placeholder="Lütfen telefon numaranızı giriniz." />
+        </div>
+        <div class="form-group">
+            <label for="password">Parola</label>
+            <input type="text" name="password" id="password" placeholder="Lütfen şifre giriniz." />
+        </div>
+        <div class="form-group">
+            <label for="repassword">Parola Tekrar</label>
+            <input type="text" name="repassword" id="repassword" placeholder="Lütfen şifrenizi tekrar giriniz." />
+        </div>
+
+        <button id="btn">Kaydet</button>
+    </div>
+
+    <script>
+
+        $(function () {
+
+
+            function isEmail(email) {
+                var pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;  //javascript regular expressions email --> email için tanımlanmış kurallar yani içinde @ geçiyor mu nokta karakteri geçiyor mu gibi...
+                return pattern.test(email);
+            }
+
+            $("#btn").click(function () {
+
+                var errormessgae = "";
+                $("#error").html("");
+
+                if ($("#email").val() == "") {
+                    errormessgae+="<p> Email alanı zorunludur </p>"
+                }
+
+                if (isEmail($("#email").val()) == false) {
+                    errormessgae+="<p> Mail alanı düzgün girilmedi </p> "
+                }
+
+                if ($("#phone").val() == "") {
+                    errormessgae += "<p> Telefon numarası alanı zorunludur </p>"
+                }
+             
+                if ($.isNumeric($("#phone").val()) == false) {
+                    errormessgae += "<p> Telefon alanını düzgün giriniz </p>"
+                }
+                if ($("#password").val() == "") {
+                    errormessgae += "<p> Şifre alanı zorunludur </p>"
+                }
+                if ($("#password").val() != $("#repassword").val()) {
+                    errormessgae += "<p> Şifreler eşleşmiyor </p>"
+                }
+
+                if (errormessgae != "") {
+                    $("#error").html(errormessgae);
+                }
+
+            });
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

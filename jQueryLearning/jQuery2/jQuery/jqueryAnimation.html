@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    <style>
+
+        #box {
+            position: absolute; /*oluşturduğumuz nesnenin yerini değiştirebilmek için*/
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="animate">Animate</button>
+
+
+    <div id="box">
+        Merhaba
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            //art arda animasyon yazdık. Butona ilk bastığımızda mavi kutumuz sağa doğru büyüyerek gidecek yerine ulaştıktan sonra kutunun içerisindeki yazının boyutu büyüyecek
+            $("#animate").click(function () {
+
+                var box = $("#box"); //her defasında tekrar tekrar yazmamak için box id'li elemanın referansını aldık
+
+                box.animate({
+                    left: '600px',
+                    width: '300px',
+                    height: '300px'
+                },
+                    3000,  //3 saniyede gitmesi için virgülden sonra hız miktarını yazabiliriz. slow veya fast'de yazabiliriz
+                );
+
+                box.animate({ fontSize: '30px' }, 3000);
+
+            });
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

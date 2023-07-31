@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <div>
+        <h2>
+            JQuery Eğitim Seti
+        </h2>
+    </div>
+    <p id="result"></p>
+    <button>Click</button>
+
+    <br /><br /><hr />
+    <h2>Welcome to My jQuery Lesson</h2>
+    <p id="result2"></p>
+    <button id="btn">Clickkkkk</button><br />
+
+    <div id="wait" class="loading">
+        <img src="img/load.gif" width="64" height="64" alt="" />
+        <br />Loading..
+    </div><br /><hr />
+    <div id="yazi"></div> <br />
+    <button id="run">Click 2</button>
+    <!--AJAX ile sayfa yenilenmeden güncelleme, silme, ekleme işlemleri yapabiliriz.-->
+    <script>
+        //$(function () {
+        //    $("button").click(function () {
+        //        $("div").load("demo.txt");
+        //    });
+        //});
+
+        //$(function () {
+        //    $("button").click(function () {  // sadece p1 id'li paragrafı getir
+        //        $("div").load("demo.txt #p1");
+        //    });
+        //});
+
+        //$(function () {
+        //    $("button").click(function () {
+        //        $("div").load("demo.txt", function (responseTxt, statusTxt, xhr) {  // responseTxt - eğer çağrı başarılı olursa sonuçtaki içeriği içerir
+        //                                                                            // statusTxt - aramanın durumunu içerir
+        //                                                              // xhr - XMLHttpRequest nesnesini içerir
+        //            if (statusTxt = "success")
+        //                alert("İçerik başarıyla yüklendi")
+        //            else if (statusTxt = "error")
+        //                alert("Hata: " + xhr.status + " : " + xhr.statusText);
+        //        });
+        //    });
+        //});
+
+        // AJAX kullanımı 2
+
+        $(function () {
+            //$("button").click(function () {
+            //    $.ajax({
+            //        url: "demo.txt",
+            //        success: function (result) {
+            //            $("#result").html(result);
+            //        }
+            //    });
+            //});
+
+            //$("button").click(function () {
+            //    $.getJSON("demo.json", function (result) {
+            //        $("#result").html("İsim: " + result.name + "<br> Soyisim: " + result.lastname + "<br> Yaş: " + result.age);
+            //    });
+            //});
+
+            //$("button").click(function () {
+            //    $.getScript("demo.js");
+            //});
+
+            //AJAX kullanımı 3
+
+            $(document).ajaxStart(function () {
+                $("#wait").css("display", "block"); // işlem başladığında gifi görünür yap
+            });
+            $(document).ajaxComplete(function () {
+                $("#wait").css("display", "none"); // işlem tamamlandığında gifi görünmez yap
+            });
+            $(document).ajaxSuccess(function () {
+                alert("AJAX isteği başarılı bir şekilde çalıştı") // hata olmadığında bunu çalıştıracak
+            });
+            $(document).ajaxError(function () { // hata oluşursa bunu çalıştıracak
+                alert("AJAX isteği bir hatayla karşılaştı")
+            });
+            $(document).ajaxSend(function () { // ajax isteği gönderilirken çalışır
+                $("#result").append("<p>demo.txt dosyası isteniyor..</p>");
+            });
+
+            $(document).ajaxStop(function () { // ajax istekleri bittikten sonra çalışır
+                alert("Tüm AJAX istekleri tamamlandı")
+            });
+
+            $("#btn").click(function () {
+                $("#result2").load("demo.txt");
+            });
+            //$("#btn").click(function () {
+            //    $("#result2").load("demods.txt");
+            //});
+
+
+            $("#run").click(function () {
+                $.when($.ajax("demo.js")).then(Nice, Wrong); // demo.js dosyası varsa işlem başarılı mesajı dönecektir
+                function Nice() {
+                    $("#yazi").text("İşlem başarılı");
+                }
+                function Wrong() {
+                    $("#yazi").text("İşlem başarısız");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

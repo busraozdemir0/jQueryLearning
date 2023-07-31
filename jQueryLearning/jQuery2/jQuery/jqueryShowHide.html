@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+</head>
+<body>
+
+  <p>Sıfırdan Web Developer Eğitimi</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button id="toggle">Toggle</button>
+
+    <script>
+        $(document).ready(function () {
+            //hide butonuna basıldığında p etiketinde yazan eleman gizlenir, show butonuna basınca da yazı gösterilir.
+
+            $("#hide").click(function () {
+                $("p").hide("fast");
+               /* $("p").hide("2000"); //2 saniye içerisinde kaybolur*/
+            });
+
+            $("#show").click(function () {
+                $("p").show("slow", function () {
+                    alert("paragraf gösterildi");
+                });
+            });
+
+            $("#toggle").click(function () {
+                $("p").toggle();  //ekranda gözüküyorsa hide metodunu, eğer ekranda gözükmüyorsa show metodunu çalıştırır.
+            });
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

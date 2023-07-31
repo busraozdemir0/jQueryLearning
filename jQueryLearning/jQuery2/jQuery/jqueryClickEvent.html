@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+    <style>
+        .paragrafrenklendir
+        {
+            color:red;
+            font-size:25px;
+        }
+    </style>
+
+</head>
+    <body>
+
+        <p id="p1">Web Developer Eğitimi ~P1~</p>
+        <p id="p2">Web Developer Eğitimi ~P2~</p>
+        <p class="paragraf">Web Developer Eğitimi ~Paragraf~</p>
+        <p class="paragraf">Web Developer Eğitimi ~Paragraf~</p>
+
+
+        <script>
+
+            $(document).ready(function () {
+                console.log("document ready")
+            });
+            //2.yöntem
+            $(function () {
+                console.log("document ready")
+            });
+
+            //~~~~~~~~~~
+
+            $(document).ready(function () {
+                $("#p1").click(function () {
+                    alert("p1 click event"); //p1 id'li elemana tıklandığında alert gelir
+                });
+            });
+
+            $(document).ready(function () {
+                $(".paragraf").click(function () {
+                    $(this).addClass("paragrafrenklendir"); //eriştiğimiz paragraf classının hangisi olduğunu ayırt edebilmek için this ile referansını belirtiriz.
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

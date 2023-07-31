@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+</head>
+    <body>
+
+        <h3 id="header">jQuery Dersleri</h3>
+        <a href="#">Link</a>
+
+        <ul id="liste">
+            <li>jQuery Reference</li>
+            <li>Selectors</li>
+            <li>jQuery Plugins <a href="#">Link</a></li>
+        </ul>
+
+        <ul>
+            <li>jQuery Reference</li>
+            <li>Selectors</li>
+            <li>jQuery Plugins <a href="#">Link</a></li>
+        </ul>
+
+
+        <script>
+            $("#header").css("color", "blue"); //header id'li elemanın rengi blue olsun.
+
+            $("#liste a").css("text-decoration", "none"); //liste id'li altındaki a elementinin alt çizgisini kaldır
+
+            var styles = {
+                color: "green",
+                fontSize: "20px",
+                border:"1px solid red"
+            }
+            $("ul li").css(styles);
+
+            //javascript ile de şu şekilde olacaktır
+            var listeler = document.querySelectorAll("li");
+            for (var i = 0; i < listeler.length; i++) {
+                listeler[i].style.color = "red";
+            }
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+</head>
+<body>
+    <div>
+        <h2>
+            jQuery Plugin(Eklenti) kullanımı - Colorbox
+        </h2>
+    </div>
+    <p>
+        <a class="group1" href="img/1.jpg" title="Me and my grandfather on the Ohoopee."><img alt="" src="img/1.jpg" width="150" height="100" /></a>
+    </p>
+    <p>
+        <a class="group1" href="img/2.jpg" title="On the Ohoopee as a child"><img alt="" src="img/2.jpg" width="150" height="100" /></a>
+    </p>
+    <p>
+        <a class="group1" href="img/3.jpg" title="On the Ohoopee as an adult"><img alt="" src="img/3.jpg" width="150" height="100" /></a>
+    </p>
+
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script>
+        // Foto galeri yapma eklentisi(colorbox)
+        $(function () {
+            $(".group1").colorbox({
+                rel: "group1",
+                transition: "fade"
+                /*slideshow:true*/  // biz dokunmadan kendiri ilerler(slider gibi)
+            });
+        });
+
+    </script>
+</body>
+</html>

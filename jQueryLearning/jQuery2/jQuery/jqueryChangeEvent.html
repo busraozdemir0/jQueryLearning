@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <title>jQuery Learning</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+</head>
+<body>
+
+    <form>
+        <p>
+            Ad: <input class="control" type="text" />
+        </p>
+        <p>
+            Hobiler: <select class="control">
+                <option value="spor" selected="selected">Spor Yapmak</option>
+                <option value="sinema">Sinema</option>
+            </select>
+        </p>
+
+    </form>
+
+
+    <script>
+
+        $(document).ready(function () {  //sayfa içindeki tüm elemanların yüklendiğinden emin olmak için yazıyoruz.
+
+            $(".control").change(function () {
+             console.log($(this).val());
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

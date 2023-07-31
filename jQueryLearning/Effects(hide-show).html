@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        a {
+            color: dimgray;
+            font-size: 12px;
+        }
+
+        textarea {
+            border: none;
+            border-bottom: 2px solid #403E3E;
+            width: 450px;
+            margin: 10px;
+            resize: none;
+            outline: none;
+        }
+
+        button {
+            border: none;
+            padding: 10px;
+            width: 115px;
+            background-color: darkolivegreen;
+        }
+
+            button:hover {
+                background-color: darkkhaki;
+            }
+    </style>
+</head>
+<body>
+    <h2>JQuery Eğitim Seti</h2>
+    <br />
+    <p>Bu bir yorumdur. Alttaki linkten cevap yazabilirsiniz.</p>
+    <a>YANITLA</a><br />
+    <div class="hide">
+        <textarea id="comment" name="comment">Yorum ekleyin...</textarea><br />
+
+        <button type="button" id="cancel">İptal</button>
+        <button type="button" id="answer">Yanıtla</button>
+    </div>
+    <br /><br />
+
+
+    <script>
+        //$(function () { // gizle göster uygulaması
+        //    $("#hide").click(function () {
+        //        $("p").hide("slow"); // fast yazarsak hızlı bir şekilde gizlenir
+        //    });
+        //    $("#show").click(function () {
+        //        $("p").show("slow");
+        //    });
+        //});
+
+        //$(function () { // gizle göster uygulaması
+        //    $("#hide").click(function () {
+        //        $("p").hide(1000); // 1000ms'de gizlenecek
+        //    });
+        //    $("#show").click(function () {
+        //        $("p").show("fast");
+        //    });
+        //});
+
+        //$(function () { // gizle göster uygulaması
+        //    $("#hide").click(function () {
+        //        $("p").toggle() // toggle açma kapama işlemini aynı butonda yapabilmemizi sağlar.
+        //    });
+
+        //});
+
+        $(function () { 
+            $(".hide").hide();
+
+            $("a").click(function () {
+                $(".hide").show("slow");
+            });
+            $("#cancel").click(function () {
+                $(".hide").hide("slow");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> <!--cdn ile dahil etme(daha hızlıdır)-->
+
+</head>
+<body>
+    <h2>jQuery Eğitim Seti</h2>
+    <p>Tıkla bana JQUERY gücünü gör</p>
+    <p>Bana da tıkla</p>
+    <p>Son kez tıkla :)</p>
+    <p>Username: <input type="text" name="username" id="username" /></p>
+    <p>Email: <input type="email" name="email" id="email" /></p>
+    <div id="result"></div>
+    <a href="#" id="link">Click link</a>
+    <br />
+    <div><p id="son" style="border:1px solid black; padding:15px;">JQuery Learning 7</p></div>
+
+    <button type="button" id="Btn">Click Me!</button>
+
+    <script>
+        //$(function () {
+        //    $("p").click(function () {
+        //        $(this).hide();
+        //    });
+        //});
+
+        //$(function () {
+        //    $("p").dblclick(function () { // çift tıklanınca p etiketlere gizlenecek
+        //        $(this).hide();
+        //    });
+        //});
+
+        //$(function () {
+        //    $("p").mouseenter(function () { // paragrafın alanına girdiğimizde alert ile uyarı mesajı gösterir
+        //        alert("Paragrafın alanına girdin.")
+        //    });
+        //});
+
+        //$(function () {
+        //    $("p").mousedown(function () {
+        //        alert("Paragrafa tıkladın.") // paragrafın üstüne tıklayınca alert gösterir.
+        //    });
+        //});
+
+        //$(function () {
+        //    $("p").hover(function () {
+        //        alert("Paragrafın üzerine geldin.") // paragrafın üzerine gelince alert gösterir.
+        //    });
+        //});
+
+        //$(function () {
+        //    $("input").keydown(function () {
+        //        $("input").css("background-color","darkred") // klavyeden bir tuşa tıklanında bordo olacak
+        //    });
+        //    $("input").keyup(function () {
+        //        $("input").css("background-color", "darkolivegreen") // klavyeden bir tuşa basıp bırakınca
+        //    });
+        //});
+
+
+        //$("p").on({         // birden fazla olay kullanılacaksa
+        //    mouseenter: function () {
+        //        $(this).css("background-color", "darkred").css("height", "90px");
+        //    },
+        //    mouseleave: function () {
+        //        $(this).css("background-color", "darkolivegreen").css("height", "50px");
+        //    },
+        //    click: function () {
+        //        $(this).css("background-color", "yellow").css("height", "150px");
+        //    },
+        //});
+
+        //$(function () {  // yazılan metni seçildiğindeki olay
+        //    $("#username").select(function () {
+        //        $("#result").text("Seçildi");
+        //    })
+        //});
+
+        //$(function () {  // one => olayın bir kez çalışması
+        //    $("p").one("click",function () {
+        //        alert("Bir kez çalışır");
+        //    });
+        //});
+
+        //$(function () {  // one => olayın bir kez çalışması
+        //    $("#link").click(function () {
+        //        alert("Linke tıkladın");
+        //    });
+        //    $("#Btn").click(function () {  // trigger ile başka elementlerin event'lerini alıp kullanabildik'
+        //        $("#link").trigger("click");
+        //    });
+        //});
+
+        $(function () {
+            $("#son").mouseover(function () {
+                $("#son").css("background-color", "red");
+            });
+            $("#son").mouseout(function () {
+                $("#son").css("background-color", "yellow");
+            });
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>

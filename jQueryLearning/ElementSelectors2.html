@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> <!--cdn ile dahil etme(daha hızlıdır)-->
+
+</head>
+<body>
+    <h2 class="result">jQuery Eğitim Seti</h2>
+    <p id="test">Tıkla bana JQUERY gücünü gör</p>
+    <p>Bana da tıkla</p>
+    <p class="result">Son kez tıkla :)</p>
+    <div>
+        
+    </div>
+    <div><p class="result">Merhabaaa</p></div>
+    <p><input type="image" style="width:200px; height:100px;" src="img/paris.jpg" /></p>
+    <form>
+        <p>
+            <label>Username:</label>
+            <input type="text" id="username" />
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" id="password" />
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" id="email" value="example@gmail.com" disabled />
+        </p>
+        <p>
+            <label>Message:</label>
+            <textarea id="message">  </textarea>
+        </p>
+        <p>
+            <input type="checkbox" id="agree" /> Sözleşmeyi okudum ve kabul ettim.
+        </p>
+        <p>
+            <label>
+                <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" />
+                Bay
+            </label>
+            <label>
+                <input type="radio" name="RadioGroup1" value="0" id="RadioGroup1_1" />
+                Bayan
+            </label>
+            <br />
+        </p>
+        <p><input type="file" /></p>
+        <p><input type="reset" value="clear" /></p>
+        <p><input type="submit" values="Send" /></p>
+    </form>
+    <ul>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Yahoo</a></li>
+        <li><a href="#">Yandex</a></li>
+        <li><a href="#">Bing</a></li>
+    </ul>
+
+    <button type="button">Click Me!</button>
+
+    <script>
+        $(function () { /*documnet.ready yazmasak da olur*/
+            $("button").click(function () {
+                // $(":button").css("width", "200x").css("height", "80px");
+                //$(":checkbox").css("width", "50x").css("height", "50px");
+                //$(":checked").css("width", "100x").css("height", "100px"); // seçili olanlara uygulanır
+                //$("p:contains(Son)").css("background-color","blue");
+                //$("a:not(:contains(Yandex))").css("background-color","red"); // Yandex içermeyenmetinleri seçer
+                //$(":disabled").css("background-color","red"); // Yandex içermeyenmetinleri seçer
+                //$("div").css("background-color", "red").css("height", "100px"); // divleri seçer
+                //$(":focus").css("background-color", "red"); // imleç nereyi gösteriyorsa oraya odaklanır ve çalıştırır
+                //$("div:has(p)").css("background-color", "red"); // içinde p olan div'leri seçiyoruz has ile
+               // $(":header").css("background-color", "red"); // başlık etiketlerini seçmek için
+                //$(":input").css("background-color", "red"); // başlık etiketlerini seçmek için
+               // $(":radio").css("background-color", "red").css("height", "50px").css("width","20px"); // başlık etiketlerini seçmek için
+                //$(":reset").css("background-color", "red").css("height", "50px").css("width","50px"); 
+               // $(":visible").css("background-color", "red"); 
+                //$("ul:li last").css("background-color", "red"); 
+                //$("ul: li odd").css("background-color", "red"); 
+                $(".result, #test, a").css("background-color", "red"); // birden fazla seçmek için
+
+
+            });
+        });
+
+    </script>
+
+</body>
+</html>

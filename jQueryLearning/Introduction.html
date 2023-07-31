@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>--> <!--js indirerek dahil etme-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> <!--cdn ile dahil etme(daha hızlıdır)-->
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <p>Tıkla bana JQUERY gücünü gör</p>
+    <p>Bana da tıkla</p>
+    <p>Son kez tıkla :)</p>
+    <script>
+        /* ikinci yöntem (javascript komutları ile)*/
+        var obj = document.querySelectorAll("p"); /*p taglarının hepsini seçtik ve obj değişkenine atadık*/
+        obj[0].onclick = function () {   /* p taglarından 1.sine tıklanınca gizlenmesini sağladık.*/
+            obj[0].style.display = "none";
+        }
+        obj[1].onclick = function () {
+            obj[1].style.display = "none";
+        }
+        obj[2].onclick = function () {
+            obj[0].style.display = "none";
+        };
+    </script>
+</body>
+</html>
